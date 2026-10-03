@@ -1,0 +1,862 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Zahra Bahrami | Psychotherapy</title>
+
+    <meta name="description"
+          content="Zahra Bahrami — Psychodynamic psychotherapy and psychological work.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap"
+          rel="stylesheet">
+
+    <style>
+
+        /* ------------------------------
+           GENERAL
+        ------------------------------ */
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            background: #f7f5f0;
+            color: #252525;
+            font-family: "DM Sans", sans-serif;
+            font-weight: 400;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+
+        /* ------------------------------
+           NAVIGATION
+        ------------------------------ */
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 100;
+
+            background: rgba(247,245,240,0.94);
+            backdrop-filter: blur(10px);
+
+            border-bottom: 1px solid #dedbd3;
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: auto;
+
+            padding: 25px 45px;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: "Playfair Display", serif;
+            font-size: 24px;
+        }
+
+        .navigation {
+            display: flex;
+            gap: 35px;
+
+            font-size: 13px;
+        }
+
+        .navigation a {
+            transition: opacity 0.3s ease;
+        }
+
+        .navigation a:hover {
+            opacity: 0.5;
+        }
+
+
+        /* ------------------------------
+           HERO
+        ------------------------------ */
+
+        .hero {
+            min-height: 100vh;
+
+            max-width: 1200px;
+            margin: auto;
+
+            padding: 170px 45px 100px;
+
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-content {
+            max-width: 850px;
+        }
+
+        .small-title {
+            font-size: 11px;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+
+            margin-bottom: 35px;
+
+            color: #66706c;
+        }
+
+        h1 {
+            font-family: "Playfair Display", serif;
+
+            font-size: clamp(55px, 8vw, 105px);
+
+            font-weight: 400;
+            line-height: 1.02;
+
+            margin: 0 0 40px;
+
+            letter-spacing: -0.04em;
+        }
+
+        h1 em {
+            font-style: italic;
+        }
+
+        .intro {
+            max-width: 650px;
+
+            font-size: 18px;
+            line-height: 1.8;
+
+            color: #565b59;
+        }
+
+        .hero-link {
+            display: inline-block;
+
+            margin-top: 40px;
+
+            padding-bottom: 7px;
+
+            border-bottom: 1px solid #333;
+
+            font-size: 13px;
+        }
+
+
+        /* ------------------------------
+           SECTIONS
+        ------------------------------ */
+
+        section {
+            max-width: 1200px;
+            margin: auto;
+
+            padding: 120px 45px;
+        }
+
+        .section-label {
+            font-size: 10px;
+
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+
+            color: #68736e;
+
+            margin-bottom: 55px;
+        }
+
+        .section-grid {
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 100px;
+        }
+
+        h2 {
+            font-family: "Playfair Display", serif;
+
+            font-size: clamp(38px, 5vw, 65px);
+
+            font-weight: 400;
+
+            line-height: 1.1;
+
+            margin: 0;
+        }
+
+        .text {
+            max-width: 600px;
+
+            color: #565b59;
+
+            font-size: 16px;
+
+            line-height: 1.9;
+        }
+
+        .text p {
+            margin-top: 0;
+            margin-bottom: 28px;
+        }
+
+
+        /* ------------------------------
+           PSYCHOTHERAPY
+        ------------------------------ */
+
+        .therapy {
+            background: #ebe9e3;
+
+            max-width: none;
+        }
+
+        .therapy-inner {
+            max-width: 1110px;
+            margin: auto;
+        }
+
+        .therapy h2 {
+            max-width: 750px;
+        }
+
+        .therapy-text {
+            max-width: 650px;
+
+            margin-top: 45px;
+
+            font-size: 17px;
+            line-height: 1.9;
+
+            color: #555b58;
+        }
+
+
+        /* ------------------------------
+           APPROACH
+        ------------------------------ */
+
+        .approach-list {
+            margin-top: 70px;
+
+            border-top: 1px solid #d5d1c8;
+        }
+
+        .approach-item {
+            display: grid;
+
+            grid-template-columns: 80px 1fr;
+
+            padding: 30px 0;
+
+            border-bottom: 1px solid #d5d1c8;
+        }
+
+        .approach-number {
+            color: #77827d;
+            font-size: 12px;
+        }
+
+        .approach-item h3 {
+            font-family: "Playfair Display", serif;
+
+            font-size: 28px;
+
+            font-weight: 400;
+
+            margin: 0 0 10px;
+        }
+
+        .approach-item p {
+            max-width: 650px;
+
+            margin: 0;
+
+            color: #626764;
+
+            line-height: 1.8;
+        }
+
+
+        /* ------------------------------
+           PRACTICAL INFORMATION
+        ------------------------------ */
+
+        .practical {
+            background: #f0eee9;
+
+            max-width: none;
+        }
+
+        .practical-inner {
+            max-width: 1110px;
+            margin: auto;
+        }
+
+        .practical-grid {
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 50px;
+
+            margin-top: 70px;
+        }
+
+        .practical-card h3 {
+            font-family: "Playfair Display", serif;
+
+            font-weight: 400;
+
+            font-size: 25px;
+
+            margin-bottom: 15px;
+        }
+
+        .practical-card p {
+            color: #626764;
+
+            line-height: 1.8;
+
+            font-size: 14px;
+        }
+
+
+        /* ------------------------------
+           CONTACT
+        ------------------------------ */
+
+        .contact {
+            min-height: 75vh;
+
+            display: flex;
+
+            align-items: center;
+        }
+
+        .contact-content {
+            width: 100%;
+        }
+
+        .contact h2 {
+            max-width: 800px;
+        }
+
+        .email {
+            display: inline-block;
+
+            margin-top: 45px;
+
+            font-family: "Playfair Display", serif;
+
+            font-size: clamp(25px, 4vw, 45px);
+
+            border-bottom: 1px solid #333;
+
+            padding-bottom: 8px;
+        }
+
+
+        /* ------------------------------
+           FOOTER
+        ------------------------------ */
+
+        footer {
+            border-top: 1px solid #dedbd3;
+
+            padding: 30px 45px;
+
+            display: flex;
+            justify-content: space-between;
+
+            font-size: 11px;
+
+            color: #777d79;
+        }
+
+
+        /* ------------------------------
+           MOBILE
+        ------------------------------ */
+
+        @media (max-width: 750px) {
+
+            nav {
+                padding: 20px;
+            }
+
+            .navigation {
+                gap: 15px;
+                font-size: 11px;
+            }
+
+            .hero,
+            section {
+                padding-left: 22px;
+                padding-right: 22px;
+            }
+
+            .hero {
+                padding-top: 140px;
+            }
+
+            .section-grid {
+                grid-template-columns: 1fr;
+
+                gap: 45px;
+            }
+
+            .practical-grid {
+                grid-template-columns: 1fr;
+
+                gap: 35px;
+            }
+
+            .approach-item {
+                grid-template-columns: 45px 1fr;
+            }
+
+            footer {
+                padding: 25px 22px;
+
+                flex-direction: column;
+
+                gap: 10px;
+            }
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     NAVIGATION
+========================= -->
+
+<header>
+
+    <nav>
+
+        <a href="#home" class="logo">
+            Zahra Bahrami
+        </a>
+
+        <div class="navigation">
+
+            <a href="#about">About</a>
+
+            <a href="#therapy">Psychotherapy</a>
+
+            <a href="#approach">Approach</a>
+
+            <a href="#contact">Contact</a>
+
+        </div>
+
+    </nav>
+
+</header>
+
+
+
+<!-- =========================
+     HOME
+========================= -->
+
+<main>
+
+<section id="home" class="hero">
+
+    <div class="hero-content">
+
+        <div class="small-title">
+            Psychodynamic Psychotherapy
+        </div>
+
+        <h1>
+            A space to<br>
+            <em>think and explore.</em>
+        </h1>
+
+        <p class="intro">
+
+            Psychotherapy can offer a space to slow down,
+            think about what is happening in our lives,
+            and explore experiences that may be difficult
+            to understand or put into words.
+
+        </p>
+
+        <a href="#about" class="hero-link">
+            About my work →
+        </a>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     ABOUT
+========================= -->
+
+<section id="about">
+
+    <div class="section-label">
+        01 — About
+    </div>
+
+    <div class="section-grid">
+
+        <h2>
+            About<br>
+            <em>me.</em>
+        </h2>
+
+        <div class="text">
+
+            <p>
+                I am Zahra Bahrami, a psychologist and
+                psychodynamic psychotherapist in training.
+            </p>
+
+            <p>
+                My work is informed by psychological,
+                psychodynamic and intercultural perspectives.
+                I am interested in how our experiences,
+                relationships and histories can shape the
+                ways we understand ourselves and the world
+                around us.
+            </p>
+
+            <p>
+                I aim to offer a thoughtful, respectful and
+                non-judgemental space in which you can explore
+                what brings you to therapy at your own pace.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     PSYCHOTHERAPY
+========================= -->
+
+<section id="therapy" class="therapy">
+
+    <div class="therapy-inner">
+
+        <div class="section-label">
+            02 — Psychotherapy
+        </div>
+
+        <h2>
+            What is<br>
+            <em>psychotherapy?</em>
+        </h2>
+
+        <p class="therapy-text">
+
+            Psychodynamic psychotherapy is a way of working
+            that explores the relationship between our present
+            experiences and the feelings, relationships and
+            patterns that have developed throughout our lives.
+
+            <br><br>
+
+            Therapy can provide an opportunity to become curious
+            about thoughts and feelings, including experiences
+            that may be difficult to recognise or express.
+
+            <br><br>
+
+            The work is collaborative and develops through the
+            therapeutic relationship, with space to think together
+            about what matters to you.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     APPROACH
+========================= -->
+
+<section id="approach">
+
+    <div class="section-label">
+        03 — My approach
+    </div>
+
+    <h2>
+        Making space for<br>
+        <em>your experience.</em>
+    </h2>
+
+
+    <div class="approach-list">
+
+
+        <div class="approach-item">
+
+            <div class="approach-number">
+                01
+            </div>
+
+            <div>
+
+                <h3>
+                    Curiosity
+                </h3>
+
+                <p>
+                    We can approach your experiences with
+                    curiosity rather than judgement, allowing
+                    thoughts and feelings to be explored at
+                    your own pace.
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="approach-item">
+
+            <div class="approach-number">
+                02
+            </div>
+
+            <div>
+
+                <h3>
+                    Relationships
+                </h3>
+
+                <p>
+                    Our relationships can have a powerful
+                    influence on how we experience ourselves
+                    and others. Psychotherapy provides space
+                    to think about these patterns together.
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="approach-item">
+
+            <div class="approach-number">
+                03
+            </div>
+
+            <div>
+
+                <h3>
+                    Your pace
+                </h3>
+
+                <p>
+                    There is no single way to begin therapy.
+                    The work develops according to what you
+                    bring and what feels meaningful for you.
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="approach-item">
+
+            <div class="approach-number">
+                04
+            </div>
+
+            <div>
+
+                <h3>
+                    Context
+                </h3>
+
+                <p>
+                    I am particularly attentive to the ways
+                    culture, relationships, identity and
+                    life circumstances can shape psychological
+                    experience.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     PRACTICAL INFORMATION
+========================= -->
+
+<section class="practical">
+
+    <div class="practical-inner">
+
+        <div class="section-label">
+            04 — Practical information
+        </div>
+
+        <h2>
+            Beginning<br>
+            <em>therapy.</em>
+        </h2>
+
+
+        <div class="practical-grid">
+
+
+            <div class="practical-card">
+
+                <h3>
+                    Sessions
+                </h3>
+
+                <p>
+                    Individual psychotherapy sessions,
+                    with the frequency and duration discussed
+                    together according to your needs.
+                </p>
+
+            </div>
+
+
+
+            <div class="practical-card">
+
+                <h3>
+                    Location
+                </h3>
+
+                <p>
+                    Information about in-person and/or
+                    online sessions can be added here.
+                </p>
+
+            </div>
+
+
+
+            <div class="practical-card">
+
+                <h3>
+                    First conversation
+                </h3>
+
+                <p>
+                    You are welcome to get in touch to ask
+                    questions and find out whether this way
+                    of working might be suitable for you.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     CONTACT
+========================= -->
+
+<section id="contact" class="contact">
+
+    <div class="contact-content">
+
+        <div class="section-label">
+            05 — Contact
+        </div>
+
+        <h2>
+            If you would like to
+            find out more, you are
+            welcome to get in touch.
+        </h2>
+
+        <!-- CHANGE THIS EMAIL -->
+
+        <a
+            class="email"
+            href="mailto:YOUR-EMAIL@example.com"
+        >
+            YOUR-EMAIL@example.com
+        </a>
+
+    </div>
+
+</section>
+
+</main>
+
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    <span>
+        © 2026 Zahra Bahrami
+    </span>
+
+    <span>
+        Psychodynamic Psychotherapy
+    </span>
+
+</footer>
+
+
+</body>
+</html>
